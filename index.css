@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 327 39% 91%;
+    --foreground: 330 40% 2%;
+    --card: 327 39% 91%;
+    --card-foreground: 330 40% 2%;
+    --popover: 327 39% 91%;
+    --popover-foreground: 330 40% 2%;
+    --primary: 328 38% 74%;
+    --primary-foreground: 330 40% 2%;
+    --secondary: 328 39% 87%;
+    --secondary-foreground: 330 40% 2%;
+    --muted: 327 39% 20%;
+    --muted-foreground: 330 40% 70%;
+    --accent: 328 39% 47%;
+    --accent-foreground: 327 39% 91%;
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 330 40% 2%;
+    --border: 327 39% 20%;
+    --input: 327 39% 20%;
+    --ring: 328 39% 40%;
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 327 39% 9%;
+    --foreground: 330 40% 98%;
+    --card: 327 39% 9%;
+    --card-foreground: 330 40% 98%;
+    --popover: 327 39% 9%;
+    --popover-foreground: 330 40% 98%;
+    --primary: 328 38% 26%;
+    --primary-foreground: 330 40% 98%;
+    --secondary: 328 39% 13%;
+    --secondary-foreground: 330 40% 98%;
+    --muted: 327 39% 80%;
+    --muted-foreground: 330 40% 98%;
+    --accent: 328 39% 53%;
+    --accent-foreground: 327 39% 9%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 329 41% 10%;
+    --border: 327 39% 60%;
+    --input: 327 39% 80%;
+    --ring: 328 39% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .play {
+    animation-play-state: running;
+  }
+  .pause {
+    animation-play-state: paused;
+  }
+
+  .backface-visible {
+    backface-visibility: visible;
+  }
+  
+  .backface-invisible {
+    backface-visibility: hidden;
+  }
+}
